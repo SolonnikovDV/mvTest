@@ -69,7 +69,7 @@ create table if not exists test_mv.load_metadata (
 Инкрементальная загрузка реализована бачами по 100 строк через сохранение последней позиции чтения данных в таблице `load_metadata`. 
 Таким образом, следующее чтение данных начиная с последней прочтенной строки и предыдущие данные не будут затронуты.
 
-#### 5. Реализуем DAG который будет выполнять инкрементальную загрузку данных каждые 5 минут
+#### 5. Реализуем [DAG](https://github.com/SolonnikovDV/mvTest/blob/master/dags/test_load_dag.py) который будет выполнять инкрементальную загрузку данных каждые 5 минут
 ```python
 from airflow import DAG
 from airflow.operators.python import PythonOperator
