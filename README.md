@@ -16,6 +16,7 @@
 ##### Запуск поекта инкрементальной загрузки данных из таблицы в БД
 1. Проект использует скприты загрузки исполняемые по расписанию через `DAG` в `airflow`.
 2. Для развертывания `airflow`  в докер подготовлен `docker-compose.yml` [тут](https://github.com/SolonnikovDV/mvTest/blob/master/docker-compose.yaml)
+
 ```bash
 docker-compose up -d
 ```
