@@ -12,7 +12,8 @@
 | Таск 7  | Запуск максимально простой: в проекте нужны скрипты python и requirements.txt, проект должен запускаться по инструкции в readme для девопса [Описание](https://github.com/SolonnikovDV/mvTest/blob/master/csv_dowload/task_7.md)|[Расположение](https://github.com/SolonnikovDV/mvTest/tree/master/csv_dowload)  |
 
 <br> 
-#### Инструкция к таску 5
+
+#### Инструкция к таску 5 
 ##### Запуск поекта инкрементальной загрузки данных из таблицы в БД
 1. Проект использует скприты загрузки исполняемые по расписанию через `DAG` в `airflow`.
 2. Для развертывания `airflow`  в докер подготовлен [docker-compose.yml](https://github.com/SolonnikovDV/mvTest/blob/master/docker-compose.yaml)
