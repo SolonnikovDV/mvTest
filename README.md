@@ -19,10 +19,12 @@
 #### Инструкция к таску 5 
 ##### Запуск поекта инкрементальной загрузки данных из таблицы в БД
 1. Проект использует скприты загрузки исполняемые по расписанию через `DAG` в `airflow`.
-2. Для развертывания `airflow`  в докер подготовлен [docker-compose.yml](https://github.com/SolonnikovDV/mvTest/blob/master/docker-compose.yaml)
+2. Для развертывания `airflow`  в докер подготовлен [docker-compose.yml](https://github.com/SolonnikovDV/mvTest/blob/master/docker-compose.yaml) \
+   Для старта контенера выполнить из директории проекта где распложена структура `dags` , `logs`, `plugins` следующую команду
 
 ```bash
 docker-compose up -d
 ```
-3. Либо перенести проект `python_tasks` и `DAG` `test_load_dag.py` на целевое пространство, где уже развернут `airflow`.
+
+3. Либо перенести проект `python_tasks` и  `test_load_dag.py` на целевое пространство, где уже развернут `airflow`.
 <hr>
