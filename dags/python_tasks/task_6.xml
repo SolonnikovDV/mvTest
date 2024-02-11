@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.39">
+  <root id="1"/>
+  <database id="2" parent="1" name="mv_test">
+    <Current>1</Current>
+    <Grants>11||10|C|G
+11||-9223372036854775808|U|G
+11||10|U|G
+2200||-9223372036854775808|C|G
+2200||10|C|G
+2200||-9223372036854775808|U|G
+2200||10|U|G
+13391||10|C|G
+13391||-9223372036854775808|U|G
+13391||10|U|G</Grants>
+    <IntrospectionStateNumber>3101</IntrospectionStateNumber>
+    <ObjectId>16384</ObjectId>
+    <Relations>sequence|table|17070|17071|1
+sequence|table|17347|17348|1
+sequence|table|17354|17355|1
+sequence|table|17368|17369|1
+sequence|table|17382|17383|1
+sequence|table|17394|17395|1
+</Relations>
+    <OwnerName>postgres</OwnerName>
+  </database>
+  <schema id="3" parent="2" name="test_mv">
+    <IntrospectionStateNumber>3101</IntrospectionStateNumber>
+    <ObjectId>17346</ObjectId>
+    <StateNumber>1322</StateNumber>
+    <OwnerName>postgres</OwnerName>
+  </schema>
+  <sequence id="4" parent="3" name="addresses_address_id_seq">
+    <DataType>integer|0s</DataType>
+    <ObjectId>17368</ObjectId>
+    <StateNumber>1322</StateNumber>
+    <OwnerName>postgres</OwnerName>
+  </sequence>
+  <sequence id="5" parent="3" name="clients_client_id_seq">
+    <DataType>integer|0s</DataType>
+    <ObjectId>17347</ObjectId>
+    <StateNumber>1322</StateNumber>
+    <OwnerName>postgres</OwnerName>
+  </sequence>
+  <sequence id="6" parent="3" name="load_metadata_id_seq">
+    <DataType>integer|0s</DataType>
+    <ObjectId>17394</ObjectId>
+    <StateNumber>1322</StateNumber>
+    <OwnerName>postgres</OwnerName>
+  </sequence>
+  <sequence id="7" parent="3" name="phones_phone_id_seq">
+    <DataType>integer|0s</DataType>
+    <ObjectId>17354</ObjectId>
+    <StateNumber>1322</StateNumber>
+    <OwnerName>postgres</OwnerName>
+  </sequence>
+  <sequence id="8" parent="3" name="products_product_id_seq">
+    <DataType>integer|0s</DataType>
+    <ObjectId>17382</ObjectId>
+    <StateNumber>1322</StateNumber>
+    <OwnerName>postgres</OwnerName>
+  </sequence>
+  <table id="9" parent="3" name="addresses">
+    <ObjectId>17369</ObjectId>
+    <StateNumber>3096</StateNumber>
+    <AccessMethodId>2</AccessMethodId>
+    <OwnerName>postgres</OwnerName>
+  </table>
+  <table id="10" parent="3" name="clients">
+    <ObjectId>17348</ObjectId>
+    <StateNumber>3096</StateNumber>
+    <AccessMethodId>2</AccessMethodId>
+    <OwnerName>postgres</OwnerName>
+  </table>
+  <table id="11" parent="3" name="load_metadata">
+    <ObjectId>17395</ObjectId>
+    <StateNumber>3097</StateNumber>
+    <AccessMethodId>2</AccessMethodId>
+    <OwnerName>postgres</OwnerName>
+  </table>
+  <table id="12" parent="3" name="phones">
+    <ObjectId>17355</ObjectId>
+    <StateNumber>3098</StateNumber>
+    <AccessMethodId>2</AccessMethodId>
+    <OwnerName>postgres</OwnerName>
+  </table>
+  <table id="13" parent="3" name="products">
+    <ObjectId>17383</ObjectId>
+    <StateNumber>3099</StateNumber>
+    <AccessMethodId>2</AccessMethodId>
+    <OwnerName>postgres</OwnerName>
+  </table>
+  <column id="14" parent="9" name="address_id">
+    <DataType>integer|0s</DataType>
+    <DefaultExpression>nextval(&apos;test_mv.addresses_address_id_seq&apos;::regclass)</DefaultExpression>
+    <NotNull>1</NotNull>
+    <Position>1</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="15" parent="9" name="client_id">
+    <DataType>integer|0s</DataType>
+    <Position>2</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="16" parent="9" name="type">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>3</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <column id="17" parent="9" name="date">
+    <DataType>date|0s</DataType>
+    <Position>4</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1082</TypeId>
+  </column>
+  <column id="18" parent="9" name="city">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>5</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <column id="19" parent="9" name="street">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>6</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <column id="20" parent="9" name="house">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>7</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <column id="21" parent="9" name="flat">
+    <DataType>integer|0s</DataType>
+    <Position>8</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <foreign-key id="22" parent="9" name="addresses_client_id_fkey">
+    <ColNames>client_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17377</ObjectId>
+    <RefColNames>client_id</RefColNames>
+    <RefColPositions>1</RefColPositions>
+    <RefKeyName>clients_pkey</RefKeyName>
+    <StateNumber>1322</StateNumber>
+    <RefTableId>17348</RefTableId>
+    <RefTableName>clients</RefTableName>
+    <RefTableKind>table</RefTableKind>
+  </foreign-key>
+  <index id="23" parent="9" name="addresses_pkey">
+    <ColNames>address_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17375</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>3096</StateNumber>
+    <Unique>1</Unique>
+    <AccessMethodId>403</AccessMethodId>
+  </index>
+  <key id="24" parent="9" name="addresses_pkey">
+    <ColNames>address_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17376</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>1322</StateNumber>
+    <UnderlyingIndexId>17375</UnderlyingIndexId>
+  </key>
+  <column id="25" parent="10" name="client_id">
+    <DataType>integer|0s</DataType>
+    <DefaultExpression>nextval(&apos;test_mv.clients_client_id_seq&apos;::regclass)</DefaultExpression>
+    <NotNull>1</NotNull>
+    <Position>1</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="26" parent="10" name="application_id">
+    <DataType>integer|0s</DataType>
+    <Position>2</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <index id="27" parent="10" name="clients_pkey">
+    <ColNames>client_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17352</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>3096</StateNumber>
+    <Unique>1</Unique>
+    <AccessMethodId>403</AccessMethodId>
+  </index>
+  <key id="28" parent="10" name="clients_pkey">
+    <ColNames>client_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17353</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>1322</StateNumber>
+    <UnderlyingIndexId>17352</UnderlyingIndexId>
+  </key>
+  <column id="29" parent="11" name="id">
+    <DataType>integer|0s</DataType>
+    <DefaultExpression>nextval(&apos;test_mv.load_metadata_id_seq&apos;::regclass)</DefaultExpression>
+    <NotNull>1</NotNull>
+    <Position>1</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="30" parent="11" name="last_date">
+    <DataType>date|0s</DataType>
+    <Position>2</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1082</TypeId>
+  </column>
+  <column id="31" parent="11" name="last_hash">
+    <DataType>text|0s</DataType>
+    <Position>3</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>25</TypeId>
+  </column>
+  <column id="32" parent="11" name="updated_at">
+    <DataType>timestamp|0s</DataType>
+    <DefaultExpression>now()</DefaultExpression>
+    <Position>4</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1114</TypeId>
+  </column>
+  <index id="33" parent="11" name="load_metadata_pkey">
+    <ColNames>id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17402</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>3097</StateNumber>
+    <Unique>1</Unique>
+    <AccessMethodId>403</AccessMethodId>
+  </index>
+  <key id="34" parent="11" name="load_metadata_pkey">
+    <ColNames>id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17403</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>1322</StateNumber>
+    <UnderlyingIndexId>17402</UnderlyingIndexId>
+  </key>
+  <column id="35" parent="12" name="phone_id">
+    <DataType>integer|0s</DataType>
+    <DefaultExpression>nextval(&apos;test_mv.phones_phone_id_seq&apos;::regclass)</DefaultExpression>
+    <NotNull>1</NotNull>
+    <Position>1</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="36" parent="12" name="client_id">
+    <DataType>integer|0s</DataType>
+    <Position>2</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="37" parent="12" name="type">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>3</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <column id="38" parent="12" name="number">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>4</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <foreign-key id="39" parent="12" name="phones_client_id_fkey">
+    <ColNames>client_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17363</ObjectId>
+    <RefColNames>client_id</RefColNames>
+    <RefColPositions>1</RefColPositions>
+    <RefKeyName>clients_pkey</RefKeyName>
+    <StateNumber>1322</StateNumber>
+    <RefTableId>17348</RefTableId>
+    <RefTableName>clients</RefTableName>
+    <RefTableKind>table</RefTableKind>
+  </foreign-key>
+  <index id="40" parent="12" name="phones_pkey">
+    <ColNames>phone_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17361</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>3098</StateNumber>
+    <Unique>1</Unique>
+    <AccessMethodId>403</AccessMethodId>
+  </index>
+  <key id="41" parent="12" name="phones_pkey">
+    <ColNames>phone_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17362</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>1322</StateNumber>
+    <UnderlyingIndexId>17361</UnderlyingIndexId>
+  </key>
+  <column id="42" parent="13" name="product_id">
+    <DataType>integer|0s</DataType>
+    <DefaultExpression>nextval(&apos;test_mv.products_product_id_seq&apos;::regclass)</DefaultExpression>
+    <NotNull>1</NotNull>
+    <Position>1</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="43" parent="13" name="client_id">
+    <DataType>integer|0s</DataType>
+    <Position>2</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="44" parent="13" name="product_name">
+    <DataType>varchar(255)|0s</DataType>
+    <Position>3</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>1043</TypeId>
+  </column>
+  <column id="45" parent="13" name="count">
+    <DataType>integer|0s</DataType>
+    <Position>4</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="46" parent="13" name="cost">
+    <DataType>integer|0s</DataType>
+    <Position>5</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <column id="47" parent="13" name="total_sum">
+    <DataType>integer|0s</DataType>
+    <Position>6</Position>
+    <StateNumber>1322</StateNumber>
+    <TypeId>23</TypeId>
+  </column>
+  <foreign-key id="48" parent="13" name="products_client_id_fkey">
+    <ColNames>client_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17389</ObjectId>
+    <RefColNames>client_id</RefColNames>
+    <RefColPositions>1</RefColPositions>
+    <RefKeyName>clients_pkey</RefKeyName>
+    <StateNumber>1322</StateNumber>
+    <RefTableId>17348</RefTableId>
+    <RefTableName>clients</RefTableName>
+    <RefTableKind>table</RefTableKind>
+  </foreign-key>
+  <index id="49" parent="13" name="products_pkey">
+    <ColNames>product_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17387</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>3099</StateNumber>
+    <Unique>1</Unique>
+    <AccessMethodId>403</AccessMethodId>
+  </index>
+  <key id="50" parent="13" name="products_pkey">
+    <ColNames>product_id</ColNames>
+    <NameSurrogate>1</NameSurrogate>
+    <ObjectId>17388</ObjectId>
+    <Primary>1</Primary>
+    <StateNumber>1322</StateNumber>
+    <UnderlyingIndexId>17387</UnderlyingIndexId>
+  </key>
+</database-model>

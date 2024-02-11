@@ -1,0 +1,8 @@
+/logs/dag_processor_manager/
+/logs/incremental_load_dag/
+/logs/scheduler/
+/.env
+/ini.py
+/json.json
+/2011-capitalbikeshare-tripdata.csv
+/changed.csv
